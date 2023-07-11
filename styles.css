@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+
+/* Default setup */
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 12px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 100vh;
+    background: linear-gradient(180deg, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+}
+
+section {
+    background-color: #fff;
+    border-radius: 15px;
+    display: flex;
+    align-items: flex-start;
+    width: 680px;
+    height: 380px;
+
+    margin-bottom: 20px;
+}
+
+figure {
+    width: 200px;
+    position: relative; 
+}
+
+.box-img {
+    width: 120px;
+    position: absolute;
+    top: 125px;
+    left: -120px;
+    z-index: 1;
+} 
+
+.woman-online-desktop-img {
+    width: 300px;
+    height: 230px;
+    position: absolute;
+    top: 40px;
+    left: -100px;
+    object-fit: contain;
+}
+
+figcaption {
+    width: 450px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    margin-top: 30px;
+    margin-left: 50px;
+}
+
+.card {
+    width: 280px;
+
+    border-bottom: 1px solid #ddd;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+h1 {
+    font-size: 2.5em;
+    
+}
+
+.card > .question {
+    font-size: 1.08em;
+    color: black;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.card > .question > span > .arrow-icon {
+    width: 7px;
+    transform: rotate(180deg);
+}
+
+.card > .answer {
+    font-size: 0.6em;
+    color: hsl(240, 6%, 50%);
+    display: none;
+}
+
+
+.active > .question {
+    font-weight: 700;
+}
+
+.active > .question > span > .arrow-icon {
+    transform: rotate(-0deg);
+}
+
+.active > .answer {
+    display: block;
+    margin: 10px auto;    
+}
+
+
+
+/* Attribution */
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: white; }
+
+
+@media (max-width: 375px) {
+    section {
+        width: 320px;
+        height: 450px;
+        flex-direction: column;
+
+        margin-top: 120px;
+    }
+
+    .box-img {
+        width: 100px;
+        top: -60px;
+        left: -10px;
+    }
+
+    .woman-online-desktop-img {
+        width: 250px;
+        top: -150px;
+        left: -10px;
+    }
+
+    h1 {
+        align-self: center;
+    }
+
+    figcaption {
+        width: 280px;
+        margin: 0;
+        justify-self: center;
+        align-self: center;
+
+        margin-top: 50px;
+    }
+}
